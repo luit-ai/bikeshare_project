@@ -34,6 +34,8 @@ bikeshare_pipe = Pipeline([
     ('map_workingday', Mapper(variable = config.model_config.workingday_var, mappings = config.model_config.workingday_mappings)),
     
     ('map_hr', Mapper(variable = config.model_config.hr_var, mappings = config.model_config.hr_mappings)),
+
+
     
     ######## Handle outliers ########
     ('handle_outliers_temp', OutlierHandler(variable = config.model_config.temp_var)),
